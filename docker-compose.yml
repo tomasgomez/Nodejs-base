@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ts-node-base:
+    # Path to dockerfile.
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    environment: 
+      ENV_NAME: dev
+    # Mapping of container port to host
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    # Mount volume 
+    volumes:
+      - /usr/src/app
+      - ./src:/usr/src/app/src
+      - ./nodemon.json:/usr/src/app/nodemon.json
+    command: npm run dev
