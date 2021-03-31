@@ -1,4 +1,3 @@
-# CryptoServer-Backend
+# Nodejs Microservice Base
 
-Service connected to CryptoMarket API, fetching information about crypto-coins and sending alarms when a setted price is reached.
-Also provides endpoints to collect data, store it and process it for different purposes.
+This is a Nodejs Typescript and Express base to fastly build a microservice for any purpose. Includes many different useful tools such as different DB connections and connections, error and request handlers, logger, etc...
