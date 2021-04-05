@@ -4,4 +4,4 @@ services:
   ts-node-base:
     build:
       target: production
-    command: node dist/server.js
+    command: node dist/index.js

@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base
-    environment: 
-      ENV_NAME: dev
+    env_file:
+      - .env
     # Mapping of container port to host
     expose:
       - '3000'
@@ -15,7 +15,6 @@ services:
       - '3000:3000'
     # Mount volume 
     volumes:
-      - /usr/src/app
       - ./src:/usr/src/app/src
       - ./nodemon.json:/usr/src/app/nodemon.json
     command: npm run dev
